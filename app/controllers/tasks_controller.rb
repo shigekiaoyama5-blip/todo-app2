@@ -1,10 +1,11 @@
 class TasksController < ApplicationController
+  before_action :authenticate_user!
   def index
-    @tasks = current_user.tasks
+    @tasks =  Task.all #current_user.tasks
   end
 
   def show
-     @task = target_task params[:id]
+     @task =target_task params[:id]
   end
 
   def new
