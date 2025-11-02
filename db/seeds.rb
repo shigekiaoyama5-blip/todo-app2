@@ -8,5 +8,10 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-Task.create({title: '予算決め', description: '来季の予算を決める'})
-Task.create({title: 'スケジュール確認', description: '来月のアポ取りをする'})
+10.times do
+
+    Task.create(
+        title: Faker::Lorem.sentence(word_count: 5), 
+        description: Faker::Lorem.sentence(word_count: 100)
+    )
+end
