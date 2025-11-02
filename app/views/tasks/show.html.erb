@@ -1,17 +1,10 @@
-<h1>Tasks#show</h1>
-<p>Find me in app/views/tasks/show.html.erb</p>
-<table>
-  <tr>
-    <th>Title</th>
-    <td><%= @task.title %></td>
-  </tr>
-  <tr>
-    <th>Description</th>
-    <td><%= @task.description %></td>
-  </tr>
-  <tr>
-    <th>User.Email</th>
-    <td><%= @task.user.Email %></td>
-  </tr>
-</table>
+<div class="task">
+  <h1 class="task_title"><%= @task.title %></h1>
+  <div class="task_detail">
+  </div>
+  <div class="task_description">
+    <%= @task.description %>
+  </div>
+</div>
+<p>+ Add new comment </p>
 <p><%= link_to '一覧に戻る', tasks_url %></p>
