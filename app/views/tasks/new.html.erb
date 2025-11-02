@@ -1,11 +1,16 @@
 <h1>New Board</h1>
+<ul>
+  <% @task.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+  <% end %>
+</ul>
   <%= form_with(model: @task, url: tasks_path, method: 'post', local: true) do |f| %>
     <div>
-      <%= f.label :Name %>
+      <%= f.label :title, 'Name' %>
       <%= f.text_field :title %>
     </div>
     <div>
-      <%= f.label :Description %>
+      <%= f.label :description, 'Description' %>
       <%= f.text_area :description %>
     </div>
     <%= f.submit 'Submit' %>
