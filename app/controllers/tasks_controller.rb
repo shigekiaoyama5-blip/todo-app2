@@ -24,9 +24,11 @@ class TasksController < ApplicationController
   end
 
   def edit
-  end
+    @task = current_user.tasks.find(params[:id])
+  end 
 
   def update
+    @task = current_user.tasks.find(params[:id])
     if @task.update(task_params)
       redirect_to task_path(@task), notice: 'Upgrated'
     else
