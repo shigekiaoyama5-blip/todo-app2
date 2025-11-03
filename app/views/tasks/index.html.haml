@@ -6,6 +6,8 @@
         = task.title
       .card_description
         = task.description
+      - if task.user.present?
+        %p= task.user.display_name
       .card_comment
         %span 44
 %p= link_to '+ Add new card', new_task_path
