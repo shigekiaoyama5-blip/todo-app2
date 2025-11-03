@@ -12,6 +12,7 @@
 
     Task.create(
         title: Faker::Lorem.sentence(word_count: 5), 
-        description: Faker::Lorem.sentence(word_count: 100)
+        description: Faker::Lorem.sentence(word_count: 100),
+        due_date: Faker::Date.forward(days: 23)
     )
 end
