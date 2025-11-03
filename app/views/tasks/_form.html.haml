@@ -1,0 +1,15 @@
+%ul
+  - task.errors.full_messages.each do |message|
+    %li= message
+= form_with(model: task, local: true) do |f|
+  %div
+    = f.label :title, 'Name'
+    = f.text_field :title
+  %div
+    = f.label :description, 'Description'
+    = f.text_area :description
+  %div
+    = f.label :deadline, 'Deadline'
+    = f.date_field :deadline
+  = f.submit 'Submit'
+%p= link_to '一覧に戻る', tasks_url
