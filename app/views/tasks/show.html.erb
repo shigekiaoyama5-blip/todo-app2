@@ -7,8 +7,8 @@
       <%= image_tag 'actions.svg', class: 'dropbtn' %>
       <div class="dropdown_content mini">
         <%= link_to 'Edit', edit_task_path(@task) %>
-        <a href="#">Delete</a>
-      </div>  
+        <%= link_to 'Delete', task_path(@task), data: { turbo_method: 'delete', turbo_confirm: 'You sure delete it?' } %>
+      </div>
     </div>
   </div>
   <div class="task_description">

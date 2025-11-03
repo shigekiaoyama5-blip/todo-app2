@@ -36,6 +36,12 @@ class TasksController < ApplicationController
     end
   end
 
+  def destroy
+    task = Task.find(params[:id])
+    task.destroy!
+    redirect_to root_path, status: :see_other, notice: 'Deleted'
+  end
+
   private
   def target_task task_id
     current_user.tasks.where(id: task_id).take
