@@ -2,6 +2,15 @@
   <h1 class="task_title"><%= @task.title %></h1>
   <div class="task_detail">
   </div>
+  <div class="task_detail_actions">
+    <div class="dropdown">
+      <%= image_tag 'actions.svg', class: 'dropbtn' %>
+      <div class="dropdown_content mini">
+        <a href="#">Edit</a>
+        <a href="#">Delete</a>
+      </div>
+    </div>
+  </div>
   <div class="task_description">
     <%= @task.description %>
   </div>
