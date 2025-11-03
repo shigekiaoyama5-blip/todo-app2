@@ -1,22 +1,2 @@
 <h1>Edit Board</h1>
-<ul>
-  <% @task.errors.full_messages.each do |message| %>
-    <li><%= message %></li>
-  <% end %>
-</ul>
-  <%= form_with(model: @task, url: task_path(@task), method: 'put', local: true) do |f| %>
-    <div>
-      <%= f.label :title, 'Name' %>
-      <%= f.text_field :title %>
-    </div>
-    <div>
-      <%= f.label :description, 'Description' %>
-      <%= f.text_area :description %>
-    </div>
-    <div>
-      <%= f.label :deadline, 'Deadline' %>
-      <%= f.date_field :deadline %>
-    </div>
-    <%= f.submit 'Submit' %>
-  <% end %>
-<p><%= link_to '一覧に戻る', tasks_url %></p>
+<%= render 'form', task: @task %>
