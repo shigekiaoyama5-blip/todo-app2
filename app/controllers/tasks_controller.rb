@@ -27,9 +27,13 @@ class TasksController < ApplicationController
   end
 
   def update
-    @task = target_task params[:id]
-    @task.update(task_params)
-    redirect_to @task
+    @task = Task.find(params[:id])
+    if @task.update(task_params)
+      redirect_to task_path(@task), notice: 'Upgrated'
+    else
+      flash.now[:error] = 'Failed upgrate'
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   private
