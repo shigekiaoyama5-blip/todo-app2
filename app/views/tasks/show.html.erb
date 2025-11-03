@@ -6,9 +6,9 @@
     <div class="dropdown">
       <%= image_tag 'actions.svg', class: 'dropbtn' %>
       <div class="dropdown_content mini">
-        <a href="#">Edit</a>
+        <%= link_to 'Edit', edit_task_path(@task) %>
         <a href="#">Delete</a>
-      </div>
+      </div>  
     </div>
   </div>
   <div class="task_description">
