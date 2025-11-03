@@ -13,6 +13,10 @@
       <%= f.label :description, 'Description' %>
       <%= f.text_area :description %>
     </div>
+    <div>
+      <%= f.label :deadline, 'Deadline' %>
+      <%= f.date_field :deadline %>
+    </div>
     <%= f.submit 'Submit' %>
   <% end %>
 <p><%= link_to '一覧に戻る', tasks_url %></p>
