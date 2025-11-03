@@ -2,6 +2,7 @@
   %h1.task_title= @task.title
   .task_detail
   .task_detail_actions
+  - if current_user.has_written?(@task)
     .dropdown
       = image_tag 'actions.svg', class: 'dropbtn'
       .dropdown_content.mini
