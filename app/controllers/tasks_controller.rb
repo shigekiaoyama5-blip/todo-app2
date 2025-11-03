@@ -13,9 +13,13 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = current_user.tasks.new task_params
-    @task.save!
-    redirect_to @task
+    @task = Task.new(task_params) #current_user.tasks.new task_params
+    if @task.save
+      redirect_to task_path(@task), notice: 'Saved'
+    else
+      flash.now[:error] = 'Failed save'
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def edit
