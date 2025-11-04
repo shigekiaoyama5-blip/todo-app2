@@ -4,4 +4,8 @@ class Task < ApplicationRecord
 
     validates :description, presence: true
     validates :description, uniqueness: true
+
+    def author_name
+        user.display_name
+    end
 end

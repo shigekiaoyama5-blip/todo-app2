@@ -10,11 +10,11 @@ class TasksController < ApplicationController
   end
 
   def new
-    @task = Task.new
+    @task = current_user.tasks.build
   end
 
   def create
-    @task = Task.new(task_params) #current_user.tasks.new task_params
+    @task = current_user.tasks.build(task_params) #current_user.tasks.new task_params
     if @task.save
       redirect_to task_path(@task), notice: 'Saved'
     else
@@ -24,9 +24,11 @@ class TasksController < ApplicationController
   end
 
   def edit
-  end
+    @task = current_user.tasks.find(params[:id])
+  end 
 
   def update
+    @task = current_user.tasks.find(params[:id])
     if @task.update(task_params)
       redirect_to task_path(@task), notice: 'Upgrated'
     else
@@ -36,7 +38,7 @@ class TasksController < ApplicationController
   end
 
   def destroy
-    task = Task.find(params[:id])
+    task = current_user.tasks.find(params[:id])
     task.destroy!
     redirect_to root_path, status: :see_other, notice: 'Deleted'
   end

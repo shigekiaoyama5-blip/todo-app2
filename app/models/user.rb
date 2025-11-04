@@ -4,4 +4,12 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  def has_written?(task)
+    tasks.exists?(id: task.id)
+  end
+
+  def display_name
+    self.email.split('@').first
+  end
 end

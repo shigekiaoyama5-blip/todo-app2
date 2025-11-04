@@ -6,6 +6,7 @@
         = task.title
       .card_description
         = task.description
+      %p= task.author_name
       .card_comment
         %span 44
 %p= link_to '+ Add new card', new_task_path
