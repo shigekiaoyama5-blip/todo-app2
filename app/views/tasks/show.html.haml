@@ -12,7 +12,6 @@
     = @task.description
   .task_deadline
     = I18n.l(@task.deadline, format: :default)
-  - if @task.user.present?
-    %p= @task.user.display_name
+  %p= @task.author_name
 %p + Add new comment
 %p= link_to '一覧に戻る', tasks_url

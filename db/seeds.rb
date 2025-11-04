@@ -8,9 +8,22 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-10.times do
 
-    Task.create(
+jon = User.create!(email: 'john@example.com', password: 'password')
+emily = User.create!(email: 'emily@example.com', password: 'password')
+
+5.times do
+
+    jon.tasks.create(
+        title: Faker::Lorem.sentence(word_count: 5),
+        description: Faker::Lorem.sentence(word_count: 100),
+        deadline: Faker::Date.forward(days: 50)
+    )
+end
+
+5.times do
+
+    emily.tasks.create(
         title: Faker::Lorem.sentence(word_count: 5),
         description: Faker::Lorem.sentence(word_count: 100),
         deadline: Faker::Date.forward(days: 50)
