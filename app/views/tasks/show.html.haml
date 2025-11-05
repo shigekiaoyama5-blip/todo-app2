@@ -13,5 +13,7 @@
   .task_deadline
     = I18n.l(@task.deadline, format: :default)
   %p= @task.author_name
-%p + Add new comment
+= link_to new_task_comment_path(@task) do
+  .btn-secondary
+    + Add new comment
 %p= link_to '一覧に戻る', tasks_url
