@@ -5,6 +5,8 @@ class Task < ApplicationRecord
     validates :description, presence: true
     validates :description, uniqueness: true
 
+    has_many :comments, dependent: :destroy
+
     def author_name
         user.display_name
     end
