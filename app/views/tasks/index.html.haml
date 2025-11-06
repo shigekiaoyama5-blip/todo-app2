@@ -7,6 +7,6 @@
       .card_description
         = task.description
       %p= task.author_name
-      .card_comment
-        %span 44
+      .card_comments
+        %p #{task.comments.count}💬
 %p= link_to '+ Add new card', new_task_path
