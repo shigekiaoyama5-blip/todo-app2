@@ -13,6 +13,11 @@
   .task_deadline
     = I18n.l(@task.deadline, format: :default)
   %p= @task.author_name
+.task
+  %h2 Comment
+  - @comments.each do |comment|
+    .task_comment
+      %p= comment.content
 = link_to new_task_comment_path(@task) do
   .btn-secondary
     + Add new comment
