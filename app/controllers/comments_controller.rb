@@ -7,6 +7,7 @@ class CommentsController < ApplicationController
     def create
         @task = Task.find(params[:task_id])
         @comment = @task.comments.build(comment_params)
+        @comment.user = current_user
         if @comment.save
             redirect_to task_path(@task), notice: 'Saved'
         else

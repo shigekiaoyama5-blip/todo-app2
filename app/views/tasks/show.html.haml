@@ -1,6 +1,9 @@
 .task
   %h1.task_title= @task.title
   .task_detail
+    = image_tag @task.user.avatar_image
+    %div
+      %p= @task.author_name
   .task_detail_actions
   - if current_user.has_written?(@task)
     .dropdown
@@ -11,8 +14,7 @@
   .task_description
     = @task.description
   .task_deadline
-    = I18n.l(@task.deadline, format: :default)
-  %p= @task.author_name
+    = "Deadline : #{I18n.l(@task.deadline, format: :default)}"
 .task
   %h2 Comment
   - @comments.each do |comment|

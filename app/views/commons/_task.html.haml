@@ -1,0 +1,12 @@
+= link_to task_path(task) do
+  .card
+    .card_title
+      = task.title
+    .card_description
+      = task.description
+    .user-icon
+      = image_tag task.user.avatar_image, alt: "作成者", class: "icon creator"
+      - task.comments.limit(4).each do |comment|
+        = image_tag task.user.avatar_image, alt: "コメント者", class: "icon commenter"
+    .card_comments
+      %p #{task.comments.count}💬
