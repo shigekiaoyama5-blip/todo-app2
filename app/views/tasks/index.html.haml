@@ -1,15 +1,4 @@
 %h1 Brackets
 - @tasks.each do |task|
-  = link_to task_path(task) do
-    .card
-      .card_title
-        = task.title
-      .card_description
-        = task.description
-      .user-icon
-        = image_tag "default-avatar.png", alt: "作成者", class: "icon creator"
-        - task.comments.limit(4).each do |comment|
-          = image_tag "default-avatar.png", alt: "コメント者", class: "icon commenter"
-      .card_comments
-        %p #{task.comments.count}💬
+  = render 'commons/task', task: task
 %p= link_to '+ Add new card', new_task_path
