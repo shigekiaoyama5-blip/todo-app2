@@ -6,7 +6,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  delegate :department, :birthday, :gender, to: :profile, allow_nil: true
+  delegate :department, :age, :gender, to: :profile, allow_nil: true
 
   def has_written?(task)
     tasks.exists?(id: task.id)
