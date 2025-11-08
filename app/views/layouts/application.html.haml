@@ -16,12 +16,14 @@
     = javascript_include_tag "application", "data-turbo-track": "reload", type: "module"
   %body
     %nav
-      - if user_signed_in?
-        = link_to 'ログアウト', destroy_user_session_path, method: :delete
-      - else
-        = link_to 'サインアップ', new_user_registration_path
-        = link_to 'ログイン', new_user_session_path
-    - if flash.present?
+      .user-icon-fixed
+        = image_tag "default-avatar.png", alt: "User Icon", class: "user-avatar"
+        .dropdown
+          - if user_signed_in?
+            = link_to 'ログアウト', destroy_user_session_path, method: :delete
+          - else
+            = link_to 'サインアップ', new_user_registration_path
+            = link_to 'ログイン', new_user_session_path
       .flash
         - flash.each do |key, value|
           %div{:class => key}= value
