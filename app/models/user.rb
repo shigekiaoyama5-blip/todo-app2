@@ -14,6 +14,10 @@ class User < ApplicationRecord
     profile&.nickname || self.email.split('@').first
   end
 
+  def department
+    profile&.department
+  end
+
   def birthday
     profile&.birthday
   end
