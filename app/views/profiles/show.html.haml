@@ -9,7 +9,7 @@
         .profilePage_user_actionButton
           = link_to 'Edit', edit_profile_path
       .profilePage_user_introduction
-        
+        = current_user.profile&.introduction
 
   - current_user.tasks.each do |task|
     = render 'commons/task', task: task
