@@ -1,3 +1,15 @@
+@use "header"
+
 body {
   background-color: black;
+  margin-top: 20px;
+}
+
+.header_pageTitle {
+  font-size: 60px;
+}
+
+.user-icon-fixed {
+  margin-top: 20px;
+  font-weight: bold;
 }
