@@ -1,0 +1,53 @@
+.field {
+    margin-top: 10px;
+}
+.text {
+    width: 350px;
+    height: 30px;
+    background: #f4f4f4;
+    border-radius: 5px;
+    border: none;
+    margin-top: 5px;
+}
+
+input {
+    width: 350px;
+    height: 30px;
+    background-color: #F8BD1C;
+    border-radius: 5px;
+    border: none;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.log_in {
+    display: inline-block;
+    width: 350px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #F8BD1C;
+    border-radius: 5px;
+    border: none;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.check_box {
+    display: flex;
+    justify-content: left;
+
+    .remember_me {
+        display: inline-block;
+        width: 120px;
+        height: 40px;
+        line-height: 40px;
+    }
+
+    #user_remember_me {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+    }
+}
