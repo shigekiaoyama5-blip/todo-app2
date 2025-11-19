@@ -18,6 +18,8 @@ input {
     border: none;
     color: #ffffff;
     margin-top: 10px;
+    font-size: 16px;
+    font-family: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .log_in {
@@ -39,15 +41,17 @@ input {
 
     .remember_me {
         display: inline-block;
-        width: 120px;
-        height: 40px;
-        line-height: 40px;
+        width: 110px;
+        height: 15px;
+        margin: 5px;
+        margin-right: 0;
     }
 
     #user_remember_me {
         display: inline-block;
-        width: 25px;
-        height: 25px;
-        line-height: 25px;
+        width:  15px;
+        height: 15px;
+        margin: 10px 0px 0px 0px;
     }
 }
+
