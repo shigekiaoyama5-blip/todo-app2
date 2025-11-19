@@ -1,4 +1,4 @@
 %h1 Brackets
 - @tasks.each do |task|
   = render 'commons/task', task: task
-%p= link_to '+ Add new card', new_task_path
+%p= link_to '+ Add new card', new_task_path, class: "add_new_card"
