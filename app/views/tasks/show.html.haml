@@ -1,26 +1,26 @@
 .task
-  %h1.task_title= @task.title
+  .task_header
+    %h1.task_title= @task.title
+    .task_overall
+    .task_detail_actions
+    - if current_user.has_written?(@task)
+      .dropdown
+        = image_tag 'actions.svg', class: 'dropbtn'
+        .dropdown_content
+          = link_to 'Edit', edit_task_path(@task)
+          = link_to 'Delete', task_path(@task), data: { turbo_method: 'delete', turbo_confirm: 'You sure delete it?' }
   .task_detail
-    = image_tag @task.user.avatar_image
+    .task_description
+      = @task.description
     %div
       %p= @task.author_name
-  .task_detail_actions
-  - if current_user.has_written?(@task)
-    .dropdown
-      = image_tag 'actions.svg', class: 'dropbtn'
-      .dropdown_content.mini
-        = link_to 'Edit', edit_task_path(@task)
-        = link_to 'Delete', task_path(@task), data: { turbo_method: 'delete', turbo_confirm: 'You sure delete it?' }
-  .task_description
-    = @task.description
-  .task_deadline
-    = "Deadline : #{I18n.l(@task.deadline, format: :default)}"
-.task
+    .task_deadline
+      = "Deadline : #{I18n.l(@task.deadline, format: :default)}"
   %h2 Comment
   - @comments.each do |comment|
     .task_comment
       %p= comment.content
-= link_to new_task_comment_path(@task) do
-  .btn-secondary
-    + Add new comment
-%p= link_to '一覧に戻る', tasks_url
+  = link_to new_task_comment_path(@task) do
+    .btn-secondary
+      + Add new comment
+  %p= link_to 'Back', tasks_url, class: 'back-btn'
