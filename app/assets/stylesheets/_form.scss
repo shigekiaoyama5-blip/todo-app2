@@ -1,0 +1,25 @@
+label {
+  margin-top: 10px;
+}
+
+#task_title {
+  background-color: #f4f4f4;
+}
+
+label,
+textarea {
+  display: block;
+}
+
+#task_description {
+  background-color: #f4f4f4;
+  border: none;
+  border-radius: 10px;
+  width: 350px;
+  height: 200px;
+}
+
+#task_deadline {
+  background-color: #f4f4f4;
+  color: #000;
+}
