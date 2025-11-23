@@ -1,33 +1,42 @@
-%ul
-  - @profile.errors.full_messages.each do |message|
-    %li= message
+.profile-edit
+  %ul
+    - @profile.errors.full_messages.each do |message|
+      %li= message
 
-  = form_with(model: @profile, url: profile_path, method: 'put', local: true) do |f|
-    %div
-      = f.label :avatar, 'Profile Picture'
-    %div
-      = f.file_field :avatar
-    %div
-      = f.label :nickname, 'Name'
-    %div
-      = f.text_field :nickname, class: 'text'
-    %div
-      = f.label :department, 'Department'
-    %div
-      = f.text_field :department, class: 'text'
-    %div
-      = f.label :introduction, 'Introduction'
-    %div
-      = f.text_area :introduction
-    %div
-      = f.label :gender, 'Gender'
-    %div
-      = f.select :gender, Profile.genders.keys, {}, { class: 'text' }
-    %div
-      = f.label :birthday, 'Birthday'
-    %div
-      = f.date_field :birthday, class: 'text'
-    %div
-      = f.label :subscribed, 'Get Notifications'
-      = f.check_box :subscribed
-    = f.submit 'Update', class: 'btn-primary'
+  .profile-edit-detail
+    = form_with(model: @profile, url: profile_path, method: 'put', local: true) do |f|
+      .profile-picture
+        %div
+          = f.label :avatar, 'Profile Picture', class: "label"
+        %div
+          = f.file_field :avatar, class: "picture-file"
+      .profile-name
+        %div
+          = f.label :nickname, 'Name', class: "label"
+        %div
+          = f.text_field :nickname, class: 'text,name-text'
+      .profile-department
+        %div
+          = f.label :department, 'Department', class: "label"
+        %div
+          = f.text_field :department, class: 'text,department-text'
+      .profile-introduction
+        %div
+          = f.label :introduction, 'Introduction', class: "label"
+        %div
+          = f.text_area :introduction, class: "introduction-area"
+      .profile-gender
+        %div
+          = f.label :gender, 'Gender', class: "label"
+        %div
+          = f.select :gender, Profile.genders.keys, {}, { class: 'text' }
+      .profile-birthday
+        %div
+          = f.label :birthday, 'Birthday', class: "label"
+        %div
+          = f.date_field :birthday, class: 'text'
+      .profile-notification
+        %div
+          = f.label :subscribed, 'Get Notifications', class: "label"
+          = f.check_box :subscribed, class: "notification-checkbox"
+      = f.submit 'Update', class: 'btn-primary'
