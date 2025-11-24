@@ -1,3 +1,25 @@
+@import "header";
+@import "register";
+@import "index";
+@import "form";
+@import "show";
+@import "comment";
+@import "profile";
+@import "profile.edit";
+
+
+
+
 body {
-  background-color: black;
+  font-family: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+a {
+  font-size: 16px;
+  color: #333;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
 }

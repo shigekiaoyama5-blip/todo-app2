@@ -4,7 +4,7 @@
 
 = form_with(model: @comment, url: task_comments_path(@comment.task), local: true) do |f|
   %div
-    = f.label :content, 'New Comment'
+    = f.label :content, 'New Comment', class: 'new-comment'
   %div
     = f.text_area :content
-  = f.submit 'Submit', class: 'btn-primary'
+  = f.submit 'Submit', class: 'btn-mainly'

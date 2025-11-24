@@ -1,0 +1,29 @@
+.profile-edit {
+  padding: 0;
+  .profile-edit-detail {
+    .label {
+    }
+    .profile-picture {
+    }
+    .profile-name {
+    }
+    .profile-department {
+    }
+    .profile-introduction {
+    }
+    .profile-gender {
+    }
+    .profile-birthday {
+    }
+    .profile-notification {
+      div {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        .notification-checkbox {
+            margin-top: 15px;
+        }
+      }
+    }
+  }
+}

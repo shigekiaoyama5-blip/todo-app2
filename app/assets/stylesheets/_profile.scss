@@ -1,0 +1,45 @@
+.container.profilePage {
+    margin: 5px;
+  .profilePage_user {
+    .profilePage_user_image {
+      .avatar-image {
+        margin-top: 20px;
+        width: 90px;
+        height: 90px;
+        border-radius: 50px;
+      }
+    }
+    .profilePage_user_basicInfo {
+        margin-top: 10px;
+      .profilePage_user_name {
+        .profilePage_user_displayName {
+            text-align: center;
+        }
+        .profilePage_user_actionButton {
+            margin-top: 20px;
+            border: #000 solid 1px;
+            width: 50px;
+            padding: 5px 10px;
+            border-radius: 10px;
+        }
+      }
+      .introduction {
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #f4f4f4;
+        border-radius: 10px;
+
+        .introduction_text {
+            font-size: 20px;
+
+        }
+        .profilePage_user_introduction {
+            margin-top: 10px;
+        }
+      }
+    }
+  }
+  .profile_task {
+    margin-top: 20px;
+  }
+}
