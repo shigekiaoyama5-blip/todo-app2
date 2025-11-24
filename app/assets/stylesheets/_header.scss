@@ -7,11 +7,11 @@
   left: 0;
   right: 0;
   z-index: 999;
-  height: 60px;       // ← header 高さ固定
+  height: 60px; // ← header 高さ固定
   display: flex;
   align-items: center;
   padding: 0 20px;
-  
+
   .header_logos {
     display: flex;
     justify-content: space-between;
@@ -61,8 +61,8 @@
       border-radius: 6px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       z-index: 10;
-      min-width: 100px;
-
+      min-width: 70px;
+      right: -10px;
       a {
         font-size: 12px;
         display: block;
