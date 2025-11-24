@@ -1,5 +1,5 @@
 .container.profilePage {
-    margin: 5px;
+  margin: 5px;
   .profilePage_user {
     .profilePage_user_image {
       .avatar-image {
@@ -10,17 +10,17 @@
       }
     }
     .profilePage_user_basicInfo {
-        margin-top: 10px;
+      margin-top: 10px;
       .profilePage_user_name {
         .profilePage_user_displayName {
-            text-align: center;
+          text-align: center;
         }
         .profilePage_user_actionButton {
-            margin-top: 20px;
-            border: #000 solid 1px;
-            width: 50px;
-            padding: 5px 10px;
-            border-radius: 10px;
+          margin-top: 20px;
+          border: #000 solid 1px;
+          width: 50px;
+          padding: 5px 10px;
+          border-radius: 10px;
         }
       }
       .introduction {
@@ -30,11 +30,10 @@
         border-radius: 10px;
 
         .introduction_text {
-            font-size: 20px;
-
+          font-size: 20px;
         }
         .profilePage_user_introduction {
-            margin-top: 10px;
+          margin-top: 10px;
         }
       }
     }
