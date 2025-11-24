@@ -16,6 +16,7 @@
       %p= @task.author_name
     .task_deadline
       = "Deadline : #{I18n.l(@task.deadline, format: :default)}"
+
   %h2 Comment
   - @comments.each do |comment|
     .task_comment

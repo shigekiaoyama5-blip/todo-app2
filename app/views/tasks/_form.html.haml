@@ -3,13 +3,13 @@
     %li= message
 = form_with(model: task, local: true) do |f|
   %div
-    = f.label :title, 'Name'
-    = f.text_field :title
+    = f.label :title, 'Title'
+    = f.text_field :title, class: "text"
   %div
     = f.label :description, 'Description'
-    = f.text_area :description
+    = f.text_area :description, class: "text-area"
   %div
     = f.label :deadline, 'Deadline'
-    = f.date_field :deadline
-  = f.submit 'Submit'
-%p= link_to 'Back', tasks_url, class: "back-btn"
+    = f.date_field :deadline, class: "text"
+  = f.submit 'Submit', class: "btn-mainly"
+%p= link_to 'Back', tasks_url, class: "btn-secondary"

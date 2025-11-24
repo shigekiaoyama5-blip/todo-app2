@@ -8,6 +8,8 @@
 @import "profile.edit";
 
 
+
+
 body {
   font-family: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -16,4 +18,8 @@ a {
   font-size: 16px;
   color: #333;
   text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
 }
