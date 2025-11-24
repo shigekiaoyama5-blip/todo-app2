@@ -30,8 +30,8 @@
               - else
                 = link_to 'Sign up', new_user_registration_path
                 = link_to 'Log in', new_user_session_path
-        .flash
-          - flash.each do |key, value|
-            %div{:class => key}= value
+    .flash
+      - flash.each do |key, value|
+        %div{:class => key}= value
     %main.content
       = yield

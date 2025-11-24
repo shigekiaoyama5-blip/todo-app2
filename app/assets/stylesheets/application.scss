@@ -12,6 +12,7 @@
 
 body {
   font-family: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding-bottom: 40px;
 }
 
 a {
@@ -22,4 +23,12 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.flash {
+  position: fixed;          /* 固定表示 */
+  top: 60px;                /* header の高さ分 */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
 }
