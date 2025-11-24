@@ -53,10 +53,15 @@
       margin: 0;
       margin-top: 20px;
     }
-  }
 
-  .task_deadline {
-    margin-top: 10px;
+    .task_description {
+      white-space: normal;
+      word-wrap: break-word;
+    }
+
+    .task_deadline {
+      margin-top: 10px;
+    }
   }
 
   .task_comment {
