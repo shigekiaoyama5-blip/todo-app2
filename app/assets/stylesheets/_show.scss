@@ -64,8 +64,27 @@
     }
   }
 
-  .task_comment {
+  .comment {
+    margin-top: 10px;
+    display: flex;
     border-bottom: #f4f4f4 solid 1px;
+    width: 100%;
+    gap: 20px;
+    padding-bottom: 5px;
+    .icon.commenter {
+      width: 30px;
+      height: 30px;
+      border-radius: 50px;
+    }
+
+    .task-comment {
+      width: 80%;
+      white-space: normal;
+      word-wrap: break-word;
+      p {
+        margin: 0;
+      }
+    }
   }
 
   .btn-secondary {

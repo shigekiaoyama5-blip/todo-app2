@@ -19,8 +19,11 @@
 
   %h2 Comment
   - @comments.each do |comment|
-    .task_comment
-      %p= comment.content
+    .comment
+      .comment-image
+        = image_tag comment.user.avatar_image, alt: "コメント者", class: "icon commenter"
+      .task-comment
+        %p= comment.content
   = link_to new_task_comment_path(@task) do
     .btn-secondary
       + Add new comment
