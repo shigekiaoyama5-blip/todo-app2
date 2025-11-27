@@ -27,4 +27,4 @@
   = link_to new_task_comment_path(@task) do
     .btn-secondary
       + Add new comment
-  %p= link_to 'Back', tasks_url, class: 'back-btn'
+  %p= link_to 'Back','#', onclick: 'history.back(); return false;', class: 'back-btn'
