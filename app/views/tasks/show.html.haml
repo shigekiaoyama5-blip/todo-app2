@@ -8,7 +8,7 @@
         = image_tag 'actions.svg', class: 'dropbtn'
         .dropdown_content
           = link_to 'Edit', edit_task_path(@task)
-          = link_to 'Delete', task_path(@task), data: { turbo_method: :delete, confirm: 'You sure delete it?' }
+          = link_to 'Delete', task_path(@task), data: { turbo_method: :delete, turbo_confirm: 'You sure delete it?' }
   .task_detail
     .task_description
       = @task.description
