@@ -13,6 +13,7 @@
     %link{:href => "/icon.svg", :rel => "icon", :type => "image/svg+xml"}/
     %link{:href => "/icon.png", :rel => "apple-touch-icon"}/
     = stylesheet_link_tag "application", "data-turbo-track": "reload"
+    = javascript_include_tag "application", "data-turbo-track": "reload", defer: true
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
     %link{:crossorigin => "anonymous", :href => "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", :rel => "stylesheet"}/
   %body
@@ -26,12 +27,13 @@
             .dropdown
               - if user_signed_in?
                 = link_to 'Profile', profile_path
-                = link_to 'Log out', destroy_user_session_path, method: :delete
+                = link_to 'Log out', destroy_user_session_path, data: { turbo_method: :delete }
+
               - else
                 = link_to 'Sign up', new_user_registration_path
                 = link_to 'Log in', new_user_session_path
-        .flash
-          - flash.each do |key, value|
-            %div{:class => key}= value
+    .flash
+      - flash.each do |key, value|
+        %div{:class => key}= value
     %main.content
       = yield

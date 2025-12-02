@@ -7,11 +7,9 @@
 @import "profile";
 @import "profile.edit";
 
-
-
-
 body {
   font-family: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding-bottom: 40px;
 }
 
 a {
@@ -22,4 +20,11 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.flash {
+  position: fixed; /* 固定表示 */
+  top: 70px; /* header の高さ分 */
+  width: 100%;
+  text-align: center;
 }

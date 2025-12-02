@@ -11,6 +11,8 @@
   .card_description {
     font-size: 14px;
     padding: 10px;
+    white-space: normal;
+    word-wrap: break-word;
   }
 
   .card_icon {
@@ -42,7 +44,7 @@
   right: 0;
   margin: 10px 0;
   padding: 0 10px;
-  background-color: #FFF;
+  background-color: #fff;
   border: 2px dashed #f4f4f4;
   display: block;
   width: 100%;

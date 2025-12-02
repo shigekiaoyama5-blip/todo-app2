@@ -8,3 +8,4 @@
   %div
     = f.text_area :content
   = f.submit 'Submit', class: 'btn-mainly'
+  %p= link_to 'Back', '#', onclick: 'history.back(); return false;', class: "back-btn"
