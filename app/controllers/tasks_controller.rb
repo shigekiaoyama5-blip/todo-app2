@@ -26,7 +26,7 @@ class TasksController < ApplicationController
 
   def edit
     @task = current_user.tasks.find(params[:id])
-  end 
+  end
 
   def update
     @task = current_user.tasks.find(params[:id])
@@ -50,10 +50,11 @@ class TasksController < ApplicationController
   end
 
   def task_params
-    params.require(:task).permit(:title, :description, :deadline)
+    params.require(:task).permit(:title, :deadline)
   end
 
   def set_task
     @task =Task.find(params[:id])
   end
 end
+  

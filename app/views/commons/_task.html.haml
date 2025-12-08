@@ -3,7 +3,7 @@
     .card_title
       = task.title
     .card_description
-      = task.description= truncate(task.description, length: 100)
+      = truncate(task.description.to_plain_text, length: 100)
     .card_icon
       .user-icon
         = image_tag task.user.avatar_image, alt: "作成者", class: "icon creator"

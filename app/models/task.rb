@@ -1,10 +1,9 @@
 class Task < ApplicationRecord
-    has_rich_text :content
+    has_rich_text :description
     belongs_to :user, optional: true
     validates :title, presence: true
 
-    validates :description, presence: true
-    validates :description, uniqueness: true
+    #validates :description, presence: true
 
     has_many :comments, dependent: :destroy
 
