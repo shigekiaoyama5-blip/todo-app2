@@ -11,8 +11,7 @@
           = link_to 'Delete', task_path(@task), data: { turbo_method: :delete, turbo_confirm: 'You sure delete it?' }
   .task_detail
     .task_description
-      =@task.description.to_s
-
+      = @task.description
     %div
       %p= @task.author_name
     .task_deadline
