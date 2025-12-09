@@ -16,11 +16,22 @@
           text-align: center;
         }
         .profilePage_user_actionButton {
+          margin: 10px 0;
+          
+          .unfollow_btn {
+          margin-top: 20px;
+          border: #000 solid 1px;
+          width: 85px;
+          padding: 5px 10px;
+          border-radius: 10px;
+          }
+          .follow_btn {
           margin-top: 20px;
           border: #000 solid 1px;
           width: 50px;
           padding: 5px 10px;
           border-radius: 10px;
+          }
         }
       }
       .introduction {

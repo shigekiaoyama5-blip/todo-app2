@@ -3,8 +3,16 @@ Rails.application.routes.draw do
     resources :comments, only: [:new, :create]
   end
 
+  resources :accounts, only: [:show] do
+    resources :follows, only: [:create]
+    resources :unfollows, only: [:create]
+  end
+
   resource :profile, only: [:show, :edit, :update]
   devise_for :users
+
+  resource :timeline, only: [:show]
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.

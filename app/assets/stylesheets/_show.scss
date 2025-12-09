@@ -56,7 +56,24 @@
       margin-top: 20px;
     }
 
+    .task_author {
+      display: flex;
+      gap: 10px;
+
+      .user-avatar {
+        width: 30px;
+        height: 30px;
+        border-radius: 50px;
+      }
+      .author_name {
+        p {
+          margin: 5px;
+        }
+      }
+    }
+
     .task_description {
+      margin-top: 10px;
       white-space: normal;
       word-wrap: break-word;
     }
