@@ -1,0 +1,20 @@
+.container.profilePage
+  .profilePage_user
+    .profilePage_user_image
+      = image_tag user.avatar_image, class: "avatar-image"
+    .profilePage_user_basicInfo
+      .profilePage_user_name
+        .profilePage_user_displayName
+          #{user.display_name} / #{user.department || ' Unknown '} / (#{user.age || ' ? '}・ #{user.gender || ' Unknown '})
+        .profilePage_user_actionButton
+          - if user == current_user
+            = link_to 'Edit', edit_profile_path
+          - else
+            = link_to 'Follow', '#'
+        .introduction
+          .introduction_text Introduction
+          .profilePage_user_introduction
+            = user.profile&.introduction
+
+  - user.tasks.each do |task|
+    = render 'commons/task', task: task, class: "profile_task"
