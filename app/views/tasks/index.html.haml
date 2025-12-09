@@ -1,4 +1,9 @@
 %h1 Brackets
+.tabs
+  .tabs_item.active
+    = link_to 'New Tasks', root_path
+  .tabs_item
+    = link_to 'Time line', timeline_path
 - @tasks.each do |task|
   = render 'commons/task', task: task
 %p= link_to '+ Add new card', new_task_path, class: "add_new_card"
